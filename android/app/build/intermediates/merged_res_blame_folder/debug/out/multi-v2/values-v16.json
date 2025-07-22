@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.gtfinder.app-mergeDebugResources-101:/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\azria\\.gradle\\caches\\8.10.2\\transforms\\09a0ac3c6f368ccc569f8c23fa9beb1c\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    }
+                }
+            ]
+        }
+    ]
+}

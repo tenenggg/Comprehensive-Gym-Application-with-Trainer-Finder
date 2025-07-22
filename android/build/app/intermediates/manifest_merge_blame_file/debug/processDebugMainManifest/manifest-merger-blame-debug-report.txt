@@ -1,0 +1,718 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.gtfinder"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="35" />
+10    <!--
+11         The INTERNET permission is required for development. Specifically,
+12         the Flutter tool needs it to communicate with the running application
+13         to allow setting breakpoints, to provide hot reload, etc.
+14    -->
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->C:\flutter\gtfinder\android\app\src\debug\AndroidManifest.xml:6:5-66
+15-->C:\flutter\gtfinder\android\app\src\debug\AndroidManifest.xml:6:22-64
+16    <!--
+17     Required to query activities that can process text, see:
+18         https://developer.android.com/training/package-visibility and
+19         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+20
+21         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin.
+22    -->
+23    <queries>
+23-->C:\flutter\gtfinder\android\app\src\main\AndroidManifest.xml:39:5-44:15
+24        <intent>
+24-->C:\flutter\gtfinder\android\app\src\main\AndroidManifest.xml:40:9-43:18
+25            <action android:name="android.intent.action.PROCESS_TEXT" />
+25-->C:\flutter\gtfinder\android\app\src\main\AndroidManifest.xml:41:13-72
+25-->C:\flutter\gtfinder\android\app\src\main\AndroidManifest.xml:41:21-70
+26
+27            <data android:mimeType="text/plain" />
+27-->C:\flutter\gtfinder\android\app\src\main\AndroidManifest.xml:42:13-50
+27-->C:\flutter\gtfinder\android\app\src\main\AndroidManifest.xml:42:19-48
+28        </intent>
+29        <!-- Added to check the default browser that will host the AuthFlow. -->
+30        <intent>
+30-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:13:9-17:18
+31            <action android:name="android.intent.action.VIEW" />
+31-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:14:13-65
+31-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:14:21-62
+32
+33            <data android:scheme="http" />
+33-->C:\flutter\gtfinder\android\app\src\main\AndroidManifest.xml:42:13-50
+34        </intent> <!-- Added to check if Chrome is installed for browser-based payment authentication (e.g. 3DS1). -->
+35        <package android:name="com.android.chrome" /> <!-- Needs to be explicitly declared on Android R+ -->
+35-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:11:9-54
+35-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:11:18-51
+36        <package android:name="com.google.android.apps.maps" />
+36-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\f81ad52f7e11c2189e6d74eb2dd10a87\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:33:9-64
+36-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\f81ad52f7e11c2189e6d74eb2dd10a87\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:33:18-61
+37    </queries>
+38
+39    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+39-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\192b82968f6e893e642841864fd9b257\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:26:5-79
+39-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\192b82968f6e893e642841864fd9b257\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:26:22-76
+40
+41    <uses-feature
+41-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\f81ad52f7e11c2189e6d74eb2dd10a87\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:26:5-28:35
+42        android:glEsVersion="0x00020000"
+42-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\f81ad52f7e11c2189e6d74eb2dd10a87\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:27:9-41
+43        android:required="true" />
+43-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\f81ad52f7e11c2189e6d74eb2dd10a87\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:28:9-32
+44
+45    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+45-->[com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\c99ded66657e0b65c1436aa3ed283fb1\transformed\jetified-recaptcha-18.4.0\AndroidManifest.xml:9:5-98
+45-->[com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\c99ded66657e0b65c1436aa3ed283fb1\transformed\jetified-recaptcha-18.4.0\AndroidManifest.xml:9:22-95
+46
+47    <permission
+47-->[androidx.core:core:1.13.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\d8ff510bd83a8d66ddb11b00a8847690\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+48        android:name="com.example.gtfinder.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+48-->[androidx.core:core:1.13.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\d8ff510bd83a8d66ddb11b00a8847690\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+49        android:protectionLevel="signature" />
+49-->[androidx.core:core:1.13.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\d8ff510bd83a8d66ddb11b00a8847690\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+50
+51    <uses-permission android:name="com.example.gtfinder.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+51-->[androidx.core:core:1.13.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\d8ff510bd83a8d66ddb11b00a8847690\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+51-->[androidx.core:core:1.13.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\d8ff510bd83a8d66ddb11b00a8847690\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+52
+53    <application
+54        android:name="android.app.Application"
+55        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+55-->[androidx.core:core:1.13.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\d8ff510bd83a8d66ddb11b00a8847690\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+56        android:debuggable="true"
+57        android:extractNativeLibs="true"
+58        android:icon="@mipmap/ic_launcher"
+59        android:label="gtfinder" >
+60        <activity
+61            android:name="com.example.gtfinder.MainActivity"
+62            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+63            android:exported="true"
+64            android:hardwareAccelerated="true"
+65            android:launchMode="singleTop"
+66            android:taskAffinity=""
+67            android:theme="@style/LaunchTheme"
+68            android:windowSoftInputMode="adjustResize" >
+69
+70            <!--
+71                 Specifies an Android theme to apply to this Activity as soon as
+72                 the Android process has started. This theme is visible to the user
+73                 while the Flutter UI initializes. After that, this theme continues
+74                 to determine the Window background behind the Flutter UI.
+75            -->
+76            <meta-data
+77                android:name="io.flutter.embedding.android.NormalTheme"
+78                android:resource="@style/NormalTheme" />
+79
+80            <intent-filter>
+81                <action android:name="android.intent.action.MAIN" />
+82
+83                <category android:name="android.intent.category.LAUNCHER" />
+84            </intent-filter>
+85        </activity>
+86        <!--
+87             Don't delete the meta-data below.
+88             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+89        -->
+90        <meta-data
+91            android:name="flutterEmbedding"
+92            android:value="2" />
+93
+94        <activity
+94-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:21:9-65:20
+95            android:name="com.stripe.android.financialconnections.FinancialConnectionsSheetRedirectActivity"
+95-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:22:13-109
+96            android:exported="true"
+96-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:23:13-36
+97            android:launchMode="singleTask" >
+97-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:24:13-44
+98            <intent-filter>
+98-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:25:13-64:29
+99                <action android:name="android.intent.action.VIEW" />
+99-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:14:13-65
+99-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:14:21-62
+100
+101                <category android:name="android.intent.category.DEFAULT" />
+101-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:28:17-76
+101-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:28:27-73
+102                <category android:name="android.intent.category.BROWSABLE" />
+102-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:29:17-78
+102-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:29:27-75
+103
+104                <!-- Returning from app2app: return_url is triggered to reopen web AuthFlow and poll accounts. -->
+105                <data
+105-->C:\flutter\gtfinder\android\app\src\main\AndroidManifest.xml:42:13-50
+106                    android:host="link-accounts"
+107                    android:pathPrefix="/com.example.gtfinder/authentication_return"
+108                    android:scheme="stripe-auth" />
+109
+110                <!-- Returning from app2app: return_url is triggered to reopen native AuthFlow and poll accounts. -->
+111                <data
+111-->C:\flutter\gtfinder\android\app\src\main\AndroidManifest.xml:42:13-50
+112                    android:host="link-native-accounts"
+113                    android:pathPrefix="/com.example.gtfinder/authentication_return"
+114                    android:scheme="stripe-auth" />
+115
+116                <!-- End of web AuthFlow success and cancel URIs that begin with "stripe-auth://link-accounts/{app-id}/...” -->
+117                <data
+117-->C:\flutter\gtfinder\android\app\src\main\AndroidManifest.xml:42:13-50
+118                    android:host="link-accounts"
+119                    android:path="/com.example.gtfinder/success"
+120                    android:scheme="stripe-auth" />
+121                <data
+121-->C:\flutter\gtfinder\android\app\src\main\AndroidManifest.xml:42:13-50
+122                    android:host="link-accounts"
+123                    android:path="/com.example.gtfinder/cancel"
+124                    android:scheme="stripe-auth" />
+125
+126                <!-- Opening app2app: Web flow triggers stripe-auth://native-redirect/{app-id}/http://web-that-redirects-to-native -->
+127                <data
+127-->C:\flutter\gtfinder\android\app\src\main\AndroidManifest.xml:42:13-50
+128                    android:host="native-redirect"
+129                    android:pathPrefix="/com.example.gtfinder"
+130                    android:scheme="stripe-auth" />
+131
+132                <!-- Accepts success/cancel/fail URIs that begin with "stripe://auth-redirect” -->
+133                <data
+133-->C:\flutter\gtfinder\android\app\src\main\AndroidManifest.xml:42:13-50
+134                    android:host="auth-redirect"
+135                    android:pathPrefix="/com.example.gtfinder"
+136                    android:scheme="stripe" />
+137            </intent-filter>
+138        </activity>
+139        <activity
+139-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:66:9-69:77
+140            android:name="com.stripe.android.financialconnections.FinancialConnectionsSheetActivity"
+140-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:67:13-101
+141            android:exported="false"
+141-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:68:13-37
+142            android:theme="@style/StripeFinancialConnectionsDefaultTheme" />
+142-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:69:13-74
+143        <activity
+143-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:70:9-74:58
+144            android:name="com.stripe.android.financialconnections.ui.FinancialConnectionsSheetNativeActivity"
+144-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:71:13-110
+145            android:exported="false"
+145-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:72:13-37
+146            android:theme="@style/StripeFinancialConnectionsDefaultTheme"
+146-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:73:13-74
+147            android:windowSoftInputMode="adjustResize" />
+147-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:74:13-55
+148
+149        <service
+149-->[:firebase_auth] C:\flutter\gtfinder\android\build\firebase_auth\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:9-12:19
+150            android:name="com.google.firebase.components.ComponentDiscoveryService"
+150-->[:firebase_auth] C:\flutter\gtfinder\android\build\firebase_auth\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:18-89
+151            android:directBootAware="true"
+151-->[com.google.firebase:firebase-common:20.4.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\9636cabd684526978b5ea85b937d73b2\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:32:13-43
+152            android:exported="false" >
+152-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\192b82968f6e893e642841864fd9b257\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:68:13-37
+153            <meta-data
+153-->[:firebase_auth] C:\flutter\gtfinder\android\build\firebase_auth\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:13-11:85
+154                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
+154-->[:firebase_auth] C:\flutter\gtfinder\android\build\firebase_auth\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:10:17-124
+155                android:value="com.google.firebase.components.ComponentRegistrar" />
+155-->[:firebase_auth] C:\flutter\gtfinder\android\build\firebase_auth\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:11:17-82
+156            <meta-data
+156-->[:cloud_firestore] C:\flutter\gtfinder\android\build\cloud_firestore\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:13-11:85
+157                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
+157-->[:cloud_firestore] C:\flutter\gtfinder\android\build\cloud_firestore\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:10:17-134
+158                android:value="com.google.firebase.components.ComponentRegistrar" />
+158-->[:cloud_firestore] C:\flutter\gtfinder\android\build\cloud_firestore\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:11:17-82
+159            <meta-data
+159-->[:firebase_core] C:\flutter\gtfinder\android\build\firebase_core\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:13-11:85
+160                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+160-->[:firebase_core] C:\flutter\gtfinder\android\build\firebase_core\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:10:17-124
+161                android:value="com.google.firebase.components.ComponentRegistrar" />
+161-->[:firebase_core] C:\flutter\gtfinder\android\build\firebase_core\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:11:17-82
+162            <meta-data
+162-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\192b82968f6e893e642841864fd9b257\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:69:13-71:85
+163                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+163-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\192b82968f6e893e642841864fd9b257\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:70:17-109
+164                android:value="com.google.firebase.components.ComponentRegistrar" />
+164-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\192b82968f6e893e642841864fd9b257\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:71:17-82
+165            <meta-data
+165-->[com.google.firebase:firebase-firestore:24.11.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\ff6f3996450bcf537a26291abc5a33c2\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:17:13-19:85
+166                android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar"
+166-->[com.google.firebase:firebase-firestore:24.11.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\ff6f3996450bcf537a26291abc5a33c2\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:18:17-122
+167                android:value="com.google.firebase.components.ComponentRegistrar" />
+167-->[com.google.firebase:firebase-firestore:24.11.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\ff6f3996450bcf537a26291abc5a33c2\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:19:17-82
+168            <meta-data
+168-->[com.google.firebase:firebase-firestore:24.11.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\ff6f3996450bcf537a26291abc5a33c2\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:20:13-22:85
+169                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+169-->[com.google.firebase:firebase-firestore:24.11.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\ff6f3996450bcf537a26291abc5a33c2\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:21:17-111
+170                android:value="com.google.firebase.components.ComponentRegistrar" />
+170-->[com.google.firebase:firebase-firestore:24.11.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\ff6f3996450bcf537a26291abc5a33c2\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:22:17-82
+171            <meta-data
+171-->[com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6719ff276bd6d6eecde6f47b3f8258d5\transformed\jetified-firebase-common-ktx-20.4.3\AndroidManifest.xml:12:13-14:85
+172                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+172-->[com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6719ff276bd6d6eecde6f47b3f8258d5\transformed\jetified-firebase-common-ktx-20.4.3\AndroidManifest.xml:13:17-116
+173                android:value="com.google.firebase.components.ComponentRegistrar" />
+173-->[com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6719ff276bd6d6eecde6f47b3f8258d5\transformed\jetified-firebase-common-ktx-20.4.3\AndroidManifest.xml:14:17-82
+174            <meta-data
+174-->[com.google.firebase:firebase-common:20.4.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\9636cabd684526978b5ea85b937d73b2\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:35:13-37:85
+175                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+175-->[com.google.firebase:firebase-common:20.4.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\9636cabd684526978b5ea85b937d73b2\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:36:17-109
+176                android:value="com.google.firebase.components.ComponentRegistrar" />
+176-->[com.google.firebase:firebase-common:20.4.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\9636cabd684526978b5ea85b937d73b2\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:37:17-82
+177        </service>
+178
+179        <activity
+179-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\192b82968f6e893e642841864fd9b257\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:29:9-46:20
+180            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+180-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\192b82968f6e893e642841864fd9b257\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:30:13-80
+181            android:excludeFromRecents="true"
+181-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\192b82968f6e893e642841864fd9b257\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:31:13-46
+182            android:exported="true"
+182-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\192b82968f6e893e642841864fd9b257\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:32:13-36
+183            android:launchMode="singleTask"
+183-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\192b82968f6e893e642841864fd9b257\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:33:13-44
+184            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+184-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\192b82968f6e893e642841864fd9b257\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:34:13-72
+185            <intent-filter>
+185-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\192b82968f6e893e642841864fd9b257\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:35:13-45:29
+186                <action android:name="android.intent.action.VIEW" />
+186-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:14:13-65
+186-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:14:21-62
+187
+188                <category android:name="android.intent.category.DEFAULT" />
+188-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:28:17-76
+188-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:28:27-73
+189                <category android:name="android.intent.category.BROWSABLE" />
+189-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:29:17-78
+189-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:29:27-75
+190
+191                <data
+191-->C:\flutter\gtfinder\android\app\src\main\AndroidManifest.xml:42:13-50
+192                    android:host="firebase.auth"
+193                    android:path="/"
+194                    android:scheme="genericidp" />
+195            </intent-filter>
+196        </activity>
+197        <activity
+197-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\192b82968f6e893e642841864fd9b257\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:47:9-64:20
+198            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+198-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\192b82968f6e893e642841864fd9b257\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:48:13-79
+199            android:excludeFromRecents="true"
+199-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\192b82968f6e893e642841864fd9b257\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:49:13-46
+200            android:exported="true"
+200-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\192b82968f6e893e642841864fd9b257\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:50:13-36
+201            android:launchMode="singleTask"
+201-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\192b82968f6e893e642841864fd9b257\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:51:13-44
+202            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+202-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\192b82968f6e893e642841864fd9b257\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:52:13-72
+203            <intent-filter>
+203-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\192b82968f6e893e642841864fd9b257\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:53:13-63:29
+204                <action android:name="android.intent.action.VIEW" />
+204-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:14:13-65
+204-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:14:21-62
+205
+206                <category android:name="android.intent.category.DEFAULT" />
+206-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:28:17-76
+206-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:28:27-73
+207                <category android:name="android.intent.category.BROWSABLE" />
+207-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:29:17-78
+207-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:29:27-75
+208
+209                <data
+209-->C:\flutter\gtfinder\android\app\src\main\AndroidManifest.xml:42:13-50
+210                    android:host="firebase.auth"
+211                    android:path="/"
+212                    android:scheme="recaptcha" />
+213            </intent-filter>
+214        </activity>
+215
+216        <provider
+216-->[com.google.firebase:firebase-common:20.4.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\9636cabd684526978b5ea85b937d73b2\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:23:9-28:39
+217            android:name="com.google.firebase.provider.FirebaseInitProvider"
+217-->[com.google.firebase:firebase-common:20.4.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\9636cabd684526978b5ea85b937d73b2\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:24:13-77
+218            android:authorities="com.example.gtfinder.firebaseinitprovider"
+218-->[com.google.firebase:firebase-common:20.4.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\9636cabd684526978b5ea85b937d73b2\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:25:13-72
+219            android:directBootAware="true"
+219-->[com.google.firebase:firebase-common:20.4.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\9636cabd684526978b5ea85b937d73b2\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:26:13-43
+220            android:exported="false"
+220-->[com.google.firebase:firebase-common:20.4.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\9636cabd684526978b5ea85b937d73b2\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:27:13-37
+221            android:initOrder="100" />
+221-->[com.google.firebase:firebase-common:20.4.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\9636cabd684526978b5ea85b937d73b2\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:28:13-36
+222
+223        <activity
+223-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:8:9-11:69
+224            android:name="com.stripe.android.paymentsheet.PaymentSheetActivity"
+224-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:9:13-80
+225            android:exported="false"
+225-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:10:13-37
+226            android:theme="@style/StripePaymentSheetDefaultTheme" />
+226-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:11:13-66
+227        <activity
+227-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:12:9-15:69
+228            android:name="com.stripe.android.paymentsheet.PaymentOptionsActivity"
+228-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:13:13-82
+229            android:exported="false"
+229-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:14:13-37
+230            android:theme="@style/StripePaymentSheetDefaultTheme" />
+230-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:15:13-66
+231        <activity
+231-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:16:9-19:69
+232            android:name="com.stripe.android.customersheet.CustomerSheetActivity"
+232-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:17:13-82
+233            android:exported="false"
+233-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:18:13-37
+234            android:theme="@style/StripePaymentSheetDefaultTheme" />
+234-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:19:13-66
+235        <activity
+235-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:20:9-23:69
+236            android:name="com.stripe.android.paymentsheet.addresselement.AddressElementActivity"
+236-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:21:13-97
+237            android:exported="false"
+237-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:22:13-37
+238            android:theme="@style/StripePaymentSheetDefaultTheme" />
+238-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:23:13-66
+239        <activity
+239-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:24:9-27:69
+240            android:name="com.stripe.android.paymentsheet.paymentdatacollection.bacs.BacsMandateConfirmationActivity"
+240-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:25:13-118
+241            android:exported="false"
+241-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:26:13-37
+242            android:theme="@style/StripePaymentSheetDefaultTheme" />
+242-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:27:13-66
+243        <activity
+243-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:28:9-31:69
+244            android:name="com.stripe.android.paymentsheet.paymentdatacollection.polling.PollingActivity"
+244-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:29:13-105
+245            android:exported="false"
+245-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:30:13-37
+246            android:theme="@style/StripePaymentSheetDefaultTheme" />
+246-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:31:13-66
+247        <activity
+247-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:32:9-35:69
+248            android:name="com.stripe.android.paymentsheet.ui.SepaMandateActivity"
+248-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:33:13-82
+249            android:exported="false"
+249-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:34:13-37
+250            android:theme="@style/StripePaymentSheetDefaultTheme" />
+250-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:35:13-66
+251        <activity
+251-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:36:9-39:68
+252            android:name="com.stripe.android.paymentsheet.ExternalPaymentMethodProxyActivity"
+252-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:37:13-94
+253            android:exported="false"
+253-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:38:13-37
+254            android:theme="@style/StripePayLauncherDefaultTheme" />
+254-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:39:13-65
+255        <activity
+255-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:40:9-42:69
+256            android:name="com.stripe.android.paymentsheet.paymentdatacollection.cvcrecollection.CvcRecollectionActivity"
+256-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:41:13-121
+257            android:theme="@style/StripePaymentSheetDefaultTheme" />
+257-->[com.stripe:paymentsheet:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d71478c18db903b7488db1cc009e2003\transformed\jetified-paymentsheet-20.52.3\AndroidManifest.xml:42:13-66
+258        <activity
+258-->[com.stripe:link:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d81e7d07d3314c057778f684a8a82991\transformed\jetified-link-20.52.3\AndroidManifest.xml:8:9-13:61
+259            android:name="com.stripe.android.link.LinkActivity"
+259-->[com.stripe:link:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d81e7d07d3314c057778f684a8a82991\transformed\jetified-link-20.52.3\AndroidManifest.xml:9:13-64
+260            android:autoRemoveFromRecents="true"
+260-->[com.stripe:link:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d81e7d07d3314c057778f684a8a82991\transformed\jetified-link-20.52.3\AndroidManifest.xml:10:13-49
+261            android:configChanges="orientation|keyboard|keyboardHidden|screenLayout|screenSize|smallestScreenSize"
+261-->[com.stripe:link:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d81e7d07d3314c057778f684a8a82991\transformed\jetified-link-20.52.3\AndroidManifest.xml:11:13-115
+262            android:launchMode="singleTop"
+262-->[com.stripe:link:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d81e7d07d3314c057778f684a8a82991\transformed\jetified-link-20.52.3\AndroidManifest.xml:12:13-43
+263            android:theme="@style/StripeTransparentTheme" />
+263-->[com.stripe:link:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d81e7d07d3314c057778f684a8a82991\transformed\jetified-link-20.52.3\AndroidManifest.xml:13:13-58
+264        <activity
+264-->[com.stripe:link:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d81e7d07d3314c057778f684a8a82991\transformed\jetified-link-20.52.3\AndroidManifest.xml:14:9-19:61
+265            android:name="com.stripe.android.link.LinkForegroundActivity"
+265-->[com.stripe:link:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d81e7d07d3314c057778f684a8a82991\transformed\jetified-link-20.52.3\AndroidManifest.xml:15:13-74
+266            android:autoRemoveFromRecents="true"
+266-->[com.stripe:link:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d81e7d07d3314c057778f684a8a82991\transformed\jetified-link-20.52.3\AndroidManifest.xml:16:13-49
+267            android:configChanges="orientation|keyboard|keyboardHidden|screenLayout|screenSize|smallestScreenSize"
+267-->[com.stripe:link:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d81e7d07d3314c057778f684a8a82991\transformed\jetified-link-20.52.3\AndroidManifest.xml:17:13-115
+268            android:launchMode="singleTop"
+268-->[com.stripe:link:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d81e7d07d3314c057778f684a8a82991\transformed\jetified-link-20.52.3\AndroidManifest.xml:18:13-43
+269            android:theme="@style/StripeTransparentTheme" />
+269-->[com.stripe:link:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d81e7d07d3314c057778f684a8a82991\transformed\jetified-link-20.52.3\AndroidManifest.xml:19:13-58
+270        <activity
+270-->[com.stripe:link:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d81e7d07d3314c057778f684a8a82991\transformed\jetified-link-20.52.3\AndroidManifest.xml:20:9-37:20
+271            android:name="com.stripe.android.link.LinkRedirectHandlerActivity"
+271-->[com.stripe:link:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d81e7d07d3314c057778f684a8a82991\transformed\jetified-link-20.52.3\AndroidManifest.xml:21:13-79
+272            android:autoRemoveFromRecents="true"
+272-->[com.stripe:link:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d81e7d07d3314c057778f684a8a82991\transformed\jetified-link-20.52.3\AndroidManifest.xml:22:13-49
+273            android:exported="true"
+273-->[com.stripe:link:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d81e7d07d3314c057778f684a8a82991\transformed\jetified-link-20.52.3\AndroidManifest.xml:23:13-36
+274            android:launchMode="singleInstance"
+274-->[com.stripe:link:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d81e7d07d3314c057778f684a8a82991\transformed\jetified-link-20.52.3\AndroidManifest.xml:24:13-48
+275            android:theme="@style/StripeTransparentTheme" >
+275-->[com.stripe:link:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d81e7d07d3314c057778f684a8a82991\transformed\jetified-link-20.52.3\AndroidManifest.xml:25:13-58
+276            <intent-filter>
+276-->[com.stripe:link:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\d81e7d07d3314c057778f684a8a82991\transformed\jetified-link-20.52.3\AndroidManifest.xml:26:13-36:29
+277                <action android:name="android.intent.action.VIEW" />
+277-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:14:13-65
+277-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:14:21-62
+278
+279                <category android:name="android.intent.category.DEFAULT" />
+279-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:28:17-76
+279-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:28:27-73
+280                <category android:name="android.intent.category.BROWSABLE" />
+280-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:29:17-78
+280-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:29:27-75
+281
+282                <data
+282-->C:\flutter\gtfinder\android\app\src\main\AndroidManifest.xml:42:13-50
+283                    android:host="complete"
+284                    android:path="/com.example.gtfinder"
+285                    android:scheme="link-popup" />
+286            </intent-filter>
+287        </activity>
+288        <activity
+288-->[com.stripe:payments-ui-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\0376baaf6948c0ff9868148061e9af1e\transformed\jetified-payments-ui-core-20.52.3\AndroidManifest.xml:8:9-11:69
+289            android:name="com.stripe.android.ui.core.cardscan.CardScanActivity"
+289-->[com.stripe:payments-ui-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\0376baaf6948c0ff9868148061e9af1e\transformed\jetified-payments-ui-core-20.52.3\AndroidManifest.xml:9:13-80
+290            android:exported="false"
+290-->[com.stripe:payments-ui-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\0376baaf6948c0ff9868148061e9af1e\transformed\jetified-payments-ui-core-20.52.3\AndroidManifest.xml:10:13-37
+291            android:theme="@style/StripePaymentSheetDefaultTheme" />
+291-->[com.stripe:payments-ui-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\0376baaf6948c0ff9868148061e9af1e\transformed\jetified-payments-ui-core-20.52.3\AndroidManifest.xml:11:13-66
+292        <activity
+292-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:15:9-18:57
+293            android:name="com.stripe.android.view.AddPaymentMethodActivity"
+293-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:16:13-76
+294            android:exported="false"
+294-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:17:13-37
+295            android:theme="@style/StripeDefaultTheme" />
+295-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:18:13-54
+296        <activity
+296-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:19:9-22:57
+297            android:name="com.stripe.android.view.PaymentMethodsActivity"
+297-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:20:13-74
+298            android:exported="false"
+298-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:21:13-37
+299            android:theme="@style/StripeDefaultTheme" />
+299-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:22:13-54
+300        <activity
+300-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:23:9-26:57
+301            android:name="com.stripe.android.view.PaymentFlowActivity"
+301-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:24:13-71
+302            android:exported="false"
+302-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:25:13-37
+303            android:theme="@style/StripeDefaultTheme" />
+303-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:26:13-54
+304        <activity
+304-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:27:9-30:57
+305            android:name="com.stripe.android.view.PaymentAuthWebViewActivity"
+305-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:28:13-78
+306            android:exported="false"
+306-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:29:13-37
+307            android:theme="@style/StripeDefaultTheme" />
+307-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:30:13-54
+308        <activity
+308-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:31:9-34:61
+309            android:name="com.stripe.android.view.PaymentRelayActivity"
+309-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:32:13-72
+310            android:exported="false"
+310-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:33:13-37
+311            android:theme="@style/StripeTransparentTheme" />
+311-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:34:13-58
+312        <!--
+313        Set android:launchMode="singleTop" so that the StripeBrowserLauncherActivity instance that
+314        launched the browser Activity will also handle the return URL deep link.
+315        -->
+316        <activity
+316-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:40:9-44:61
+317            android:name="com.stripe.android.payments.StripeBrowserLauncherActivity"
+317-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:41:13-85
+318            android:exported="false"
+318-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:42:13-37
+319            android:launchMode="singleTask"
+319-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:43:13-44
+320            android:theme="@style/StripeTransparentTheme" />
+320-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:44:13-58
+321        <activity
+321-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:45:9-62:20
+322            android:name="com.stripe.android.payments.StripeBrowserProxyReturnActivity"
+322-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:46:13-88
+323            android:exported="true"
+323-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:47:13-36
+324            android:launchMode="singleTask"
+324-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:48:13-44
+325            android:theme="@style/StripeTransparentTheme" >
+325-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:49:13-58
+326            <intent-filter>
+326-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:50:13-61:29
+327                <action android:name="android.intent.action.VIEW" />
+327-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:14:13-65
+327-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:14:21-62
+328
+329                <category android:name="android.intent.category.DEFAULT" />
+329-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:28:17-76
+329-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:28:27-73
+330                <category android:name="android.intent.category.BROWSABLE" />
+330-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:29:17-78
+330-->[com.stripe:financial-connections:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\5db105e1e4e789e56e8593cd71ef23fd\transformed\jetified-financial-connections-20.52.3\AndroidManifest.xml:29:27-75
+331
+332                <!-- Must match `DefaultReturnUrl#value`. -->
+333                <data
+333-->C:\flutter\gtfinder\android\app\src\main\AndroidManifest.xml:42:13-50
+334                    android:host="payment_return_url"
+335                    android:path="/com.example.gtfinder"
+336                    android:scheme="stripesdk" />
+337            </intent-filter>
+338        </activity>
+339        <activity
+339-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:63:9-66:57
+340            android:name="com.stripe.android.payments.core.authentication.threeds2.Stripe3ds2TransactionActivity"
+340-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:64:13-114
+341            android:exported="false"
+341-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:65:13-37
+342            android:theme="@style/StripeDefaultTheme" />
+342-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:66:13-54
+343        <activity
+343-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:67:9-70:66
+344            android:name="com.stripe.android.googlepaylauncher.GooglePayLauncherActivity"
+344-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:68:13-90
+345            android:exported="false"
+345-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:69:13-37
+346            android:theme="@style/StripeGooglePayDefaultTheme" />
+346-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:70:13-63
+347        <activity
+347-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:71:9-74:66
+348            android:name="com.stripe.android.googlepaylauncher.GooglePayPaymentMethodLauncherActivity"
+348-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:72:13-103
+349            android:exported="false"
+349-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:73:13-37
+350            android:theme="@style/StripeGooglePayDefaultTheme" />
+350-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:74:13-63
+351        <activity
+351-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:75:9-78:68
+352            android:name="com.stripe.android.payments.paymentlauncher.PaymentLauncherConfirmationActivity"
+352-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:76:13-107
+353            android:exported="false"
+353-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:77:13-37
+354            android:theme="@style/StripePayLauncherDefaultTheme" />
+354-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:78:13-65
+355        <activity
+355-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:79:9-82:61
+356            android:name="com.stripe.android.payments.bankaccount.ui.CollectBankAccountActivity"
+356-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:80:13-97
+357            android:exported="false"
+357-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:81:13-37
+358            android:theme="@style/StripeTransparentTheme" /> <!-- Needs to be explicitly declared on P+ -->
+358-->[com.stripe:payments-core:20.52.3] C:\Users\azria\.gradle\caches\8.10.2\transforms\6d05716727555547c28460279631f40a\transformed\jetified-payments-core-20.52.3\AndroidManifest.xml:82:13-58
+359        <uses-library
+359-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\f81ad52f7e11c2189e6d74eb2dd10a87\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:39:9-41:40
+360            android:name="org.apache.http.legacy"
+360-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\f81ad52f7e11c2189e6d74eb2dd10a87\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:40:13-50
+361            android:required="false" />
+361-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\f81ad52f7e11c2189e6d74eb2dd10a87\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:41:13-37
+362
+363        <activity
+363-->[com.stripe:stripe-3ds2-android:6.1.8] C:\Users\azria\.gradle\caches\8.10.2\transforms\080f6d202979d0532e2668f938c59210\transformed\jetified-stripe-3ds2-android-6.1.8\AndroidManifest.xml:8:9-11:54
+364            android:name="com.stripe.android.stripe3ds2.views.ChallengeActivity"
+364-->[com.stripe:stripe-3ds2-android:6.1.8] C:\Users\azria\.gradle\caches\8.10.2\transforms\080f6d202979d0532e2668f938c59210\transformed\jetified-stripe-3ds2-android-6.1.8\AndroidManifest.xml:9:13-81
+365            android:exported="false"
+365-->[com.stripe:stripe-3ds2-android:6.1.8] C:\Users\azria\.gradle\caches\8.10.2\transforms\080f6d202979d0532e2668f938c59210\transformed\jetified-stripe-3ds2-android-6.1.8\AndroidManifest.xml:10:13-37
+366            android:theme="@style/Stripe3DS2Theme" />
+366-->[com.stripe:stripe-3ds2-android:6.1.8] C:\Users\azria\.gradle\caches\8.10.2\transforms\080f6d202979d0532e2668f938c59210\transformed\jetified-stripe-3ds2-android-6.1.8\AndroidManifest.xml:11:13-51
+367
+368        <uses-library
+368-->[androidx.window:window:1.2.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\2066453da1bcdd734e734c74c593a5ed\transformed\jetified-window-1.2.0\AndroidManifest.xml:23:9-25:40
+369            android:name="androidx.window.extensions"
+369-->[androidx.window:window:1.2.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\2066453da1bcdd734e734c74c593a5ed\transformed\jetified-window-1.2.0\AndroidManifest.xml:24:13-54
+370            android:required="false" />
+370-->[androidx.window:window:1.2.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\2066453da1bcdd734e734c74c593a5ed\transformed\jetified-window-1.2.0\AndroidManifest.xml:25:13-37
+371        <uses-library
+371-->[androidx.window:window:1.2.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\2066453da1bcdd734e734c74c593a5ed\transformed\jetified-window-1.2.0\AndroidManifest.xml:26:9-28:40
+372            android:name="androidx.window.sidecar"
+372-->[androidx.window:window:1.2.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\2066453da1bcdd734e734c74c593a5ed\transformed\jetified-window-1.2.0\AndroidManifest.xml:27:13-51
+373            android:required="false" />
+373-->[androidx.window:window:1.2.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\2066453da1bcdd734e734c74c593a5ed\transformed\jetified-window-1.2.0\AndroidManifest.xml:28:13-37
+374
+375        <activity
+375-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\2c99137fefc563c45e0c3933b265c647\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:20:9-22:45
+376            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+376-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\2c99137fefc563c45e0c3933b265c647\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:20:19-85
+377            android:exported="false"
+377-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\2c99137fefc563c45e0c3933b265c647\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:22:19-43
+378            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+378-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\2c99137fefc563c45e0c3933b265c647\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:21:19-78
+379
+380        <meta-data
+380-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\769076983b2b1512464e360b9d9337ca\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:21:9-23:69
+381            android:name="com.google.android.gms.version"
+381-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\769076983b2b1512464e360b9d9337ca\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:22:13-58
+382            android:value="@integer/google_play_services_version" />
+382-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\769076983b2b1512464e360b9d9337ca\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:23:13-66
+383
+384        <provider
+384-->[androidx.emoji2:emoji2:1.4.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\6a9a2fcfe39b0a7730c567a205c7f31d\transformed\jetified-emoji2-1.4.0\AndroidManifest.xml:24:9-32:20
+385            android:name="androidx.startup.InitializationProvider"
+385-->[androidx.emoji2:emoji2:1.4.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\6a9a2fcfe39b0a7730c567a205c7f31d\transformed\jetified-emoji2-1.4.0\AndroidManifest.xml:25:13-67
+386            android:authorities="com.example.gtfinder.androidx-startup"
+386-->[androidx.emoji2:emoji2:1.4.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\6a9a2fcfe39b0a7730c567a205c7f31d\transformed\jetified-emoji2-1.4.0\AndroidManifest.xml:26:13-68
+387            android:exported="false" >
+387-->[androidx.emoji2:emoji2:1.4.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\6a9a2fcfe39b0a7730c567a205c7f31d\transformed\jetified-emoji2-1.4.0\AndroidManifest.xml:27:13-37
+388            <meta-data
+388-->[androidx.emoji2:emoji2:1.4.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\6a9a2fcfe39b0a7730c567a205c7f31d\transformed\jetified-emoji2-1.4.0\AndroidManifest.xml:29:13-31:52
+389                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+389-->[androidx.emoji2:emoji2:1.4.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\6a9a2fcfe39b0a7730c567a205c7f31d\transformed\jetified-emoji2-1.4.0\AndroidManifest.xml:30:17-75
+390                android:value="androidx.startup" />
+390-->[androidx.emoji2:emoji2:1.4.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\6a9a2fcfe39b0a7730c567a205c7f31d\transformed\jetified-emoji2-1.4.0\AndroidManifest.xml:31:17-49
+391            <meta-data
+391-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\b336bb0a853362132e5d116df6ea5e71\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+392                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+392-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\b336bb0a853362132e5d116df6ea5e71\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+393                android:value="androidx.startup" />
+393-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\b336bb0a853362132e5d116df6ea5e71\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+394            <meta-data
+394-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\3e5d94b3600ec23f533074c59062e85f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+395                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+395-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\3e5d94b3600ec23f533074c59062e85f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+396                android:value="androidx.startup" />
+396-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\3e5d94b3600ec23f533074c59062e85f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+397        </provider>
+398
+399        <receiver
+399-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\3e5d94b3600ec23f533074c59062e85f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+400            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+400-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\3e5d94b3600ec23f533074c59062e85f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+401            android:directBootAware="false"
+401-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\3e5d94b3600ec23f533074c59062e85f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+402            android:enabled="true"
+402-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\3e5d94b3600ec23f533074c59062e85f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+403            android:exported="true"
+403-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\3e5d94b3600ec23f533074c59062e85f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+404            android:permission="android.permission.DUMP" >
+404-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\3e5d94b3600ec23f533074c59062e85f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+405            <intent-filter>
+405-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\3e5d94b3600ec23f533074c59062e85f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+406                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+406-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\3e5d94b3600ec23f533074c59062e85f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+406-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\3e5d94b3600ec23f533074c59062e85f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+407            </intent-filter>
+408            <intent-filter>
+408-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\3e5d94b3600ec23f533074c59062e85f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+409                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+409-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\3e5d94b3600ec23f533074c59062e85f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+409-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\3e5d94b3600ec23f533074c59062e85f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+410            </intent-filter>
+411            <intent-filter>
+411-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\3e5d94b3600ec23f533074c59062e85f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+412                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+412-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\3e5d94b3600ec23f533074c59062e85f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+412-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\3e5d94b3600ec23f533074c59062e85f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+413            </intent-filter>
+414            <intent-filter>
+414-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\3e5d94b3600ec23f533074c59062e85f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+415                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+415-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\3e5d94b3600ec23f533074c59062e85f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+415-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\azria\.gradle\caches\8.10.2\transforms\3e5d94b3600ec23f533074c59062e85f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+416            </intent-filter>
+417        </receiver>
+418
+419        <meta-data
+419-->[com.google.android.instantapps:instantapps:1.1.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\5d48f41ce5cba32242142cb0299066df\transformed\jetified-instantapps-1.1.0\AndroidManifest.xml:10:9-12:33
+420            android:name="aia-compat-api-min-version"
+420-->[com.google.android.instantapps:instantapps:1.1.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\5d48f41ce5cba32242142cb0299066df\transformed\jetified-instantapps-1.1.0\AndroidManifest.xml:11:13-54
+421            android:value="1" />
+421-->[com.google.android.instantapps:instantapps:1.1.0] C:\Users\azria\.gradle\caches\8.10.2\transforms\5d48f41ce5cba32242142cb0299066df\transformed\jetified-instantapps-1.1.0\AndroidManifest.xml:12:13-30
+422    </application>
+423
+424</manifest>
