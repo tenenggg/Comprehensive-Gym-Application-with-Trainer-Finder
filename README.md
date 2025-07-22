@@ -40,7 +40,8 @@ To get a local copy up and running, follow these simple steps.
 ### Prerequisites
 
 - Flutter SDK: [Installation Guide](https://flutter.dev/docs/get-started/install)
-- Firebase Account: [Create a Firebase project](https://firebase.google.com/)
+- Firebase Account: [Create a Firebase project](https://firebase.google.com/)      
+- Youtube Presentation: [Presentation Video](https://www.youtube.com/watch?v=LwAfs2OLS-w) 
 
 ### Installation
 
@@ -95,8 +96,3 @@ Don't forget to give the project a star! Thanks again!
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-## Contact
-
-Your Name - [@your_twitter](https://twitter.com/your_twitter) - email@example.com
-
-Project Link: [https://github.com/your_username/gtfinder](https://github.com/your_username/gtfinder)
